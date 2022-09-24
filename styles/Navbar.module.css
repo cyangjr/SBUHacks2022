@@ -1,0 +1,34 @@
+.container {
+  width: 100vw;
+  height: 5rem;
+  background-color: red;
+
+  display: flex;
+  align-items: center;
+}
+
+.title_container {
+  margin-left: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+
+  background-color: blue;
+}
+
+.link_container {
+  margin-left: auto;
+  background-color: yellow;
+}
+
+.link_container > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.profile {
+  width: 2rem;
+  height: 2rem;
+
+  background-color: green;
+  border-radius: 100%;
+}
