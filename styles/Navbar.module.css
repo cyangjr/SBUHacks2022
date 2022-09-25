@@ -1,7 +1,7 @@
 .container {
   width: 100vw;
   height: 4rem;
-  background-color: gray;
+  background-color: whitesmoke;
 
   display: flex;
   align-items: center;
@@ -19,6 +19,7 @@
 .title_container {
   font-family: 'Shadows Into Light', cursive;
   font-size: 1rem;
+  color: cornflowerblue;
   /* background-color: blue; */
 }
 
@@ -34,7 +35,7 @@
   align-items: center;
   gap: 0rem 2rem;
 
-  font-size: 1.5rem;
+  font-size: 1rem;
   
   list-style: none;
 }

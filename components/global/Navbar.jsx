@@ -16,7 +16,7 @@ export default function navbar() {
       <div className={styles.link_container}>
         <ul>
           <li>
-            <a href="#">About</a>
+            <a href="">About</a>
           </li>
           <li>
             <a href="#">Contact</a>
