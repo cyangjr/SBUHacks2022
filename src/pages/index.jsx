@@ -7,20 +7,47 @@ import Reminder from "../../components/home/Reminder";
 import plus_svg from "../../public/svgs/plus-sign.svg";
 
 export default function index() {
-  const [reminderArray, setReminderArray] = useState([]);
-  const data = [0];
+  const [reminderArray, setReminderArray] = useState([
+    {
+      name: "11111",
+      description: "11111",
+      dosage: "11111",
+      interval: "11111",
+      count: "11111",
+      startDate: "11111",
+      endDate: "11111",
+    },
+  ]);
 
-  const [modelClicked, setModelClicked] = useState(true);
+  const [modelClicked, setModelClicked] = useState(false);
   let name = "";
 
   async function submitReminder(e) {
     e.preventDefault();
-    alert(`So your name is ${e.target.name.value}`);
-    /* fetch("", {
-      body: {
-        name: 
-      }
-    }) */
+    const form = e.target;
+
+    function scuffedFunction() {
+      setModelClicked(false);
+
+      setReminderArray([
+        ...reminderArray,
+        {
+          name: form.name.value,
+          description: form.description.value,
+          dosage: form.dosage.value,
+          interval: form.interval.value,
+          count: form.count.value,
+          startDate: form.startDate.value,
+          endDate: form.endDate.value,
+        },
+      ]);
+
+      console.log(e);
+    }
+
+    await scuffedFunction().then(() => {
+      form.reset();
+    });
   }
 
   return (
@@ -29,7 +56,7 @@ export default function index() {
       <div className={styles.container}>
         <div
           className={styles.add_container}
-          onClick={() => setModelClicked(!modelClicked)}
+          onClick={() => setModelClicked(true)}
         >
           <div className={styles.svg_container}>
             <img src={plus_svg.src} alt="Add" />
@@ -40,8 +67,8 @@ export default function index() {
         </div>
 
         <div className={styles.reminder_container}>
-          {data.map((e) => {
-            return <Reminder reminderID={e} />;
+          {reminderArray.map((e) => {
+            return <Reminder key={e.name} props={e} />;
           })}
         </div>
 
