@@ -5,6 +5,8 @@
 
 This hack contains a frontend webapp built on Next.js and a backend build on Flask (python). It utilizies the Twilio API. The purpose of this project is to provide an easy-to-use interface that people can use to set up reminders to take their various medications. It is highly customizable, and users can create reminders with the medication’s name, description, dosage, and frequency for intake. Once a reminder is created, users will receive regular text messages in the set intervals they specified.
 
+!(public\imgs\messages-screenshot_.png)[public/imgs/messages-screenshot_.png]
+
 
 ## Tech Stack
 
