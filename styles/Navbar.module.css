@@ -1,0 +1,42 @@
+.container {
+  width: 100vw;
+  height: 4rem;
+  background-color: red;
+
+  display: flex;
+  align-items: center;
+}
+
+.title_container {
+  margin-left: 1.5rem;
+
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1rem;;
+  /* background-color: blue; */
+}
+
+.link_container {
+  margin-left: auto;
+  margin-right: 1.5rem;
+
+/*   background-color: yellow; */
+}
+
+.link_container > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0rem 2rem;
+
+  font-size: 1.5rem;
+  
+  list-style: none;
+}
+
+.profile {
+  width: 3rem;
+  height: 3rem;
+
+  background-color: green;
+  border-radius: 100%;
+}
