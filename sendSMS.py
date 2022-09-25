@@ -16,13 +16,10 @@ app = Flask(__name__)
 #   set TWILIO_ACCOUNT_SID=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 #   set TWILIO_AUTH_TOKEN=your_auth_token
 
-# route decorator tells Flask what url should trigger the function below
 
 # use FormData object in fetch request to pass data for sending message
-# get 
-endpoint = "https://localhost:5000/api/send_message"
+endpoint = "http://localhost:5000/api/send_message"
 load_dotenv(dotenv_path="twilio.env")
-# params = {name : 'Adrianna'}
 
 @app.route("/api/send_message", methods=["POST"]) 
 def send_Message():
@@ -37,15 +34,15 @@ def send_Message():
 
         
         name = request.form["name"]
-        med = request.form["medication"]
-        phone = request.form["phone_number"]
-        res = f"{name} should take {med}"
+        medication = request.form["medication"]
+        phone_number = request.form["phone_number"]
+        res = f"Hello {name}! Remember to take your {medication}."
 
         message = client.messages.create(
             body=res,
             # form data is like dictionary
             from_='+18596483770',
-            to='+1' + phone
+            to='+1' + phone_number
         )
     return ""
     
