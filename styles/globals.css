@@ -6,6 +6,9 @@ body {
   border: 0;
 	outline: 0;
   font-family: 'Raleway', sans-serif;
+  background-image:linear-gradient(white, rgba(0, 255, 255, 0)), url("https://images.unsplash.com/photo-1619964023931-da2df41d61c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9yZ2V0JTIwbWUlMjBub3QlMjBmbG93ZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1296&q=60");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 

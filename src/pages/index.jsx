@@ -35,7 +35,7 @@ export default function index() {
             <img src={plus_svg.src} alt="Add" />
           </div>
           <div className={styles.add_note_container}>
-            <input type="text" placeholder="Click to add a reminder" />
+            <input type="text" placeholder="click to add a reminder..." />
           </div>
         </div>
 
@@ -47,43 +47,28 @@ export default function index() {
 
         <div className={`${modelClicked ? styles.model : styles.model_none}`}>
           <form onSubmit={submitReminder}>
-            <div>
-              <label htmlFor="name">Name</label>
+            <div className={styles.labels}>
+              <label htmlFor="name">name</label>
+              <label htmlFor="description">description</label>
+              <label htmlFor="dosage">dosage</label>
+              <label htmlFor="interval">interval</label>
+              <label htmlFor="count">supply</label>
+              <label htmlFor="startDate">start date</label>
+              <label htmlFor="endDate">end date</label>
+            </div>
+
+            <div className={styles.text}>
               <input type="text" id="name" name="name" required />
-            </div>
-
-            <div>
-              <label htmlFor="description">Description</label>
               <input type="text" id="description" name="description" required />
-            </div>
-
-            <div>
-              <label htmlFor="dosage">Dosage</label>
               <input type="number" id="dosage" name="dosage" required />
-            </div>
-
-            <div>
-              <label htmlFor="interval">Interval</label>
               <input type="text" id="interval" name="interval" required />
-            </div>
-
-            <div>
-              <label htmlFor="count">Count</label>
               <input type="number" id="count" name="count" required />
-            </div>
-
-            <div>
-              <label htmlFor="startDate">Start Date</label>
               <input
                 type="datetime-local"
                 id="startDate"
                 name="startDate"
                 required
               />
-            </div>
-
-            <div>
-              <label htmlFor="endDate">End Date</label>
               <input
                 type="datetime-local"
                 id="endDate"
@@ -92,7 +77,7 @@ export default function index() {
               />
             </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit">submit</button>
           </form>
         </div>
       </div>
