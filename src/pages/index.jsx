@@ -4,13 +4,16 @@ import Navbar from "../../components/global/Navbar";
 import Reminder from "../../components/home/Reminder";
 
 import plus_svg from "../../public/svgs/plus-sign.svg";
+import Sidenav from "../../components/global/Sidenav";
+import React from "react";
+import MyApp from "./_app";
 
 export default function index() {
   const data = [0, 1, 2];
 
   return (
     <>
-      <Navbar />
+      <Sidenav />
       <div className={styles.container}>
         <div className={styles.add_container}>
           <div className={styles.svg_container}>
