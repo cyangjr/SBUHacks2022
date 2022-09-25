@@ -13,14 +13,14 @@
   border-radius: 999rem;
 
   display: flex;
+  gap: 0rem 0.5rem;
 
-  background-color: red;
+  cursor: pointer;
 }
 
 .svg_container {
   width: 4rem;
   height: 4rem;
-
   margin-left: 0.5rem;
 
   border: 0.2rem solid black;
@@ -33,10 +33,68 @@
   align-self: center;
 }
 
-.plus_svg {
+.svg_container > img {
   width: 2.5rem;
 }
 
+.add_note_container {
+  margin-right: 2rem;
+
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.add_note_container > input[type="text"]{
+  width: 100%;
+  height: 100%;
+
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.4);
+  
+  border: none;
+
+  cursor: pointer;
+}
+
+.add_note_container > input[type="text"]:focus, .add_note_container > textarea:focus{
+  outline: none;
+}
+
 .reminder_container {
+  width: 90%;
+  margin: 2rem 0rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem 0rem;
+}
+
+.model_none {
+  display: none;
+}
+
+.model {
+  position: absolute;
+  margin-top: 2rem;
+
+  width: 80%;
+  height: 30rem;
+
+  background-color: yellow;
+}
+
+.model > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.model > form > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.model > button[type="submit"] {
 
 }
