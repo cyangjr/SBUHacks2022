@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  height: 5rem;
+
+  border: 0.15rem solid black;
+  border-radius: 999rem;
+
+  display: flex;
+  gap: 0rem 0.5rem;
+}
+  
+.img_container {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 0.5rem;
+
+  border: 0.2rem solid black;
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: center;
+}
+  
+.img_container > img {
+  width: 2.5rem;
+}
+  
+.text_container {
+  margin-right: 2rem;
+
+  font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
