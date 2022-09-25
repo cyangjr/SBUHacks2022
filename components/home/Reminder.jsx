@@ -20,7 +20,32 @@ export default function reminder({ props }) {
     else if (["w", "wk", "wks", "week", "weeks"].includes(interval[1]))
       milliconverter = 1000 * 60 * 60 * 24 * 7;
 
-    setTimeout(() => {}, interval[0] * milliconverter);
+    setInterval(() => {
+      /* fetch("http://localhost:5000/api/send_message", {
+        method: "POST",
+        mode: "no-cors", // no-cors, *cors, same-origin
+        body: {
+          name: "Bobby",
+          medication: "Your mother's pill",
+          phone_number: "6468244872",
+        },
+        redirect: "follow",
+      }); */
+
+      const formdata = new FormData();
+      formdata.append("name", "User");
+      formdata.append("medication", props.name);
+      formdata.append("phone_number", "6468244872");
+
+      fetch("http://localhost:5000/api/send_message", {
+        method: "POST",
+        body: formdata,
+        redirect: "follow",
+      })
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
+    }, interval[0] * milliconverter);
   }
 
   useEffect(() => {

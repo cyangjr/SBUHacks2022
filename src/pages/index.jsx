@@ -8,15 +8,15 @@ import plus_svg from "../../public/svgs/plus-sign.svg";
 
 export default function index() {
   const [reminderArray, setReminderArray] = useState([
-    {
+    /* {
       name: "Vitamin C",
       description: "Vitamin C is very healthy!",
       dosage: "1",
-      interval: "5 mins",
+      interval: "5 seconds",
       count: "100",
       startDate: "2022-09-25T02:41",
       endDate: "2022-09-30T02:46",
-    },
+    }, */
   ]);
 
   const [modelClicked, setModelClicked] = useState(false);
