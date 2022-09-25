@@ -75,7 +75,7 @@ export default function index() {
         <div className={`${modelClicked ? styles.model : styles.model_none}`}>
           <form onSubmit={submitReminder}>
             <div className={styles.labels}>
-              <label htmlFor="name">name</label>
+              <label htmlFor="name">medication name</label>
               <label htmlFor="description">description</label>
               <label htmlFor="dosage">dosage</label>
               <label htmlFor="interval">interval</label>

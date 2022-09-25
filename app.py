@@ -33,10 +33,12 @@ def send_Message():
         client = Client(account_sid, auth_token)
 
         
-        name = request.form["name"]
-        medication = request.form["medication"]
+        name = request.form["user_name"]
+        medication = request.form["medication_name"]
         phone_number = request.form["phone_number"]
-        res = f"Hello {name}! Remember to take your {medication}."
+        description = request.form["description"]
+        dosage = request.form["dosage"]
+        res = f"Hello {name}! Remember to take {dosage} of your {medication}. It {description}."
 
         message = client.messages.create(
             body=res,

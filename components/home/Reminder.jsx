@@ -21,21 +21,16 @@ export default function reminder({ props }) {
       milliconverter = 1000 * 60 * 60 * 24 * 7;
 
     setInterval(() => {
-      /* fetch("http://localhost:5000/api/send_message", {
-        method: "POST",
-        mode: "no-cors", // no-cors, *cors, same-origin
-        body: {
-          name: "Bobby",
-          medication: "Your mother's pill",
-          phone_number: "6468244872",
-        },
-        redirect: "follow",
-      }); */
-
       const formdata = new FormData();
-      formdata.append("name", "User");
-      formdata.append("medication", props.name);
-      formdata.append("phone_number", "6468244872");
+      formdata.append("user_name", "User");
+      formdata.append("medication_name", props.name);
+
+      // ENTER YOUR PHONE NUMBER HERE VV
+      formdata.append("phone_number", "");
+      // ENTER YOUR PHONE NUMBER HERE ^^
+
+      formdata.append("description", props.description);
+      formdata.append("dosage", props.dosage);
 
       fetch("http://localhost:5000/api/send_message", {
         method: "POST",
