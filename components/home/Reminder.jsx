@@ -26,7 +26,7 @@ export default function reminder({ props }) {
       formdata.append("medication_name", props.name);
 
       // ENTER YOUR PHONE NUMBER HERE VV
-      formdata.append("phone_number", "6468244872");
+      formdata.append("phone_number", "");
       // ENTER YOUR PHONE NUMBER HERE ^^
 
       formdata.append("description", props.description);
