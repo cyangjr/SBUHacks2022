@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add_container {
+  width: 90%;
+  height: 5rem;
+  margin-top: 2rem;
+
+  border: 0.15rem solid black;
+  border-radius: 999rem;
+
+  display: flex;
+
+  background-color: red;
+}
+
+.svg_container {
+  width: 4rem;
+  height: 4rem;
+
+  margin-left: 0.5rem;
+
+  border: 0.2rem solid black;
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: center;
+}
+
+.plus_svg {
+  width: 2.5rem;
+}
+
+.reminder_container {
+
+}

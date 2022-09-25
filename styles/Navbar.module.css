@@ -1,15 +1,22 @@
 .container {
   width: 100vw;
   height: 4rem;
-  background-color: red;
+  background-color: gray;
 
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.logo_container {
+  margin-left: 0.75rem;
+}
+
+.logo_container > img {
+  width: 3rem;
 }
 
 .title_container {
-  margin-left: 1.5rem;
-
   font-family: 'Shadows Into Light', cursive;
   font-size: 1rem;;
   /* background-color: blue; */
@@ -19,7 +26,6 @@
   margin-left: auto;
   margin-right: 1.5rem;
 
-/*   background-color: yellow; */
 }
 
 .link_container > ul {
@@ -36,7 +42,11 @@
 .profile {
   width: 3rem;
   height: 3rem;
+}
 
-  background-color: green;
+.pfp {
+  width: 100%;
   border-radius: 100%;
+
+  cursor: pointer;
 }
