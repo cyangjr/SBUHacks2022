@@ -1,29 +1,5 @@
 import React from "react";
-import pfp from "../../public/imgs/default_pfp.jpg";
-import styles from "../../styles/Navbar.module.css";
 
 export default function navbar() {
-  return (
-    <div className={styles.container}>
-      <div className={styles.title_container}>
-        <h1>forget med-not</h1>
-      </div>
-
-      <div className={styles.link_container}>
-        <ul>
-          <li>
-            <a href="">About</a>
-          </li>
-          <li>
-            <a href="">Contact</a>
-          </li>
-          <li>
-            <div className={styles.profile}>
-              <img src={pfp} alt="Profile Picture" />
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
+  return <div>HI I AM A NAVBAR</div>;
 }
