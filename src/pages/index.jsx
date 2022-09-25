@@ -9,13 +9,13 @@ import plus_svg from "../../public/svgs/plus-sign.svg";
 export default function index() {
   const [reminderArray, setReminderArray] = useState([
     {
-      name: "11111",
-      description: "11111",
-      dosage: "11111",
-      interval: "11111",
-      count: "11111",
-      startDate: "11111",
-      endDate: "11111",
+      name: "Vitamin C",
+      description: "Vitamin C is very healthy!",
+      dosage: "1",
+      interval: "5 mins",
+      count: "100",
+      startDate: "2022-09-25T02:41",
+      endDate: "2022-09-30T02:46",
     },
   ]);
 
@@ -42,7 +42,7 @@ export default function index() {
         },
       ]);
 
-      console.log(e);
+      return new Promise((resolve) => resolve("please save me"));
     }
 
     await scuffedFunction().then(() => {
